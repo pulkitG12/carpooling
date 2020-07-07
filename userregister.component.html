@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+<body>
+
+
+<div id="id01" class="modal" style="display: block;">
+  <form class="modal-content animate" action="/action_page.php" method="post" style="width:80%">
+    <div class="container1">
+	  <h2>Sign Up</h2>
+      <label for="fullName"><b>Full Name</b></label>
+      <input class="form-control" [(ngModel)]="user.fullName" type="text" placeholder="Enter Full Name" name="fullName" required>
+     
+      <label for="companyName"><b>Select Company:</b></label>
+          <select class="form-control" [(ngModel)]="user.companyName" name="companyName">
+            <option value="1">FacePrep</option>
+            <option value="2">Amazon</option>
+            <option value="3">Google</option>
+            <option value="4">Apple</option>
+          </select>
+          
+      <label for="employeeId"><b>Employee Id</b></label>
+      <input class="form-control" type="text" [(ngModel)]="user.employeeId" placeholder="Enter Employee Id" name="employeeId" required>
+
+
+      <label for="email"><b>Email</b></label>
+      <input class="form-control" type="email" [(ngModel)]="user.email" placeholder="Enter Email" name="email" required>
+       
+      <label for="password"><b>Password</b></label>
+      <input class="form-control" type="password" [(ngModel)]="user.password"  placeholder="Enter Password" name="password" required>
+
+
+      <button (click)="createUser()" >Sign Up</button>
+    </div>
+
+    <div class="container1" style="background-color:#f1f1f1">
+      <button type="button" routerLink=""  onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <!-- <span class="password">Forgot <a href="#">password?</a></span> -->
+    </div>
+  </form>
+</div>
+</body>
+</html>
